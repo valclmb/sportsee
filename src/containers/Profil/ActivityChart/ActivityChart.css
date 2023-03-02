@@ -1,0 +1,45 @@
+.activity-chart {
+    background-color: var(--color-third);
+    border-radius: 5px;
+}
+/* custom tooltip */ 
+.activity-chart [role=dialog] {
+    outline: none;
+}
+.activity-chart .custom-tooltip {
+    color: white;
+    background-color: var(--color-second);
+
+}
+.activity-chart .custom-tooltip li {
+        padding: 8px;
+        font-size: 12px;
+}
+/* custom legend */
+.activity-chart .custom-legend {
+   display: flex;
+   justify-content: space-between;
+   padding: 20px 0;
+}
+.activity-chart .custom-legend h3 {
+    font-size: 15px;
+}
+.activity-chart .custom-legend ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+}
+.activity-chart .custom-legend li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+.activity-chart .custom-legend__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 10px
+}
+.activity-chart .custom-legend__value {
+    color: #74798C
+}
