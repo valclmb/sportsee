@@ -1,0 +1,49 @@
+.user-data {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+.user-data__card {
+    background-color: var(--color-third);
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+/* icon */
+.user-data__card__icon {
+    padding: 20px;
+    margin-right: 24px;
+}
+
+.user-data__card__icon {
+    border-radius: 6px;
+}
+/* icon background color */
+.user-data__card__icon.calories {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+.user-data__card__icon.protein {
+    background-color: rgba(74, 184, 255, 0.1);
+}
+.user-data__card__icon.glucid {
+    background-color: rgba(249, 206, 35, 0.1);
+}
+.user-data__card__icon.lipid {
+    background-color:rgba(253, 81, 129, 0.1);
+}
+
+.user-data__card p {
+    margin: 0;
+}
+/* value */
+.user-data__card__value {
+    font-weight: bold;
+    font-size: 20px;
+}
+p.user-data__card__label {
+    color: #74798C;
+    font-size: 14px;
+    margin-top : 5px;
+} 

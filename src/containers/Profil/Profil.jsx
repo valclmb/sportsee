@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getOne } from "../../http-services";
 import { ActivityChart } from "./ActivityChart/ActivityChart";
 import "./Profil.css";
+import { UserData } from "./UserData/UserData";
 // import user from "/src/assets/apiMock/user.json";
 
 export const Profil = () => {
@@ -30,7 +31,12 @@ export const Profil = () => {
             <h2>
                 Bonjour <span>{user?.userInfos.firstName}</span>
             </h2>
-            <ActivityChart id={id} />
+            <div className="profil__stats">
+                <section>
+                    <ActivityChart id={id} />
+                </section>
+                <UserData keyData={user?.keyData} />
+            </div>
         </div>
     );
 };

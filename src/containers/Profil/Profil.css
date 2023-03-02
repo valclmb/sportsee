@@ -1,6 +1,6 @@
 .profil {
     width: 100%;
-    padding: 90px;
+    padding: 50px 90px;
 }
 .profil h2 {
     margin: 0;
@@ -9,4 +9,11 @@
 /* User name */
 .profil h2 span {
     color: var(--color-second);
+}
+.profil__stats {
+    display: flex;
+    gap:30px;
+}
+.profil__stats section {
+    width: 80%;
 }
