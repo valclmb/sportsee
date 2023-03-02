@@ -1,5 +1,6 @@
 :root {
-    --color-nav : #020203;
+    --color-first : #020203;
+    --color-second : #FF0101;
 }
 body{
     margin: 0;

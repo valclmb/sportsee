@@ -5,7 +5,9 @@ export const TopNav = () => {
     const navItems = ["Accueil", "Profil", "Réglages", "Communauté"];
     return (
         <header className="top-nav">
-            <img src={logo} alt="sportsee logo" />
+            <h1>
+                <img src={logo} alt="Sportsee" />
+            </h1>
             <nav>
                 <ul>
                     {navItems.map((item) => (
