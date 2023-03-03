@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { getOne } from "../../http-services";
 import { ActivityChart } from "./ActivityChart/ActivityChart";
-import { AverageSessions } from "./Average/AverageSessions";
+import { ActivityPerformance } from "./ActivityPerformance/ActivityPerformance";
+import { AverageSessions } from "./AverageSessions/AverageSessions";
 import "./Profil.css";
 import { UserData } from "./UserData/UserData";
 // import user from "/src/assets/apiMock/user.json";
@@ -16,12 +17,6 @@ export const Profil = () => {
         getOne(id).then((res) => setUser(res.data));
     }, []);
 
-    // Get activity type
-    useEffect(() => {
-        getOne(id, "performance").then((res) => setActivityType(res.data));
-    }, []);
-    console.log(activityType);
-
     return (
         <div className="profil">
             <h2>
@@ -32,6 +27,7 @@ export const Profil = () => {
                     <ActivityChart id={id} />
                     <div>
                         <AverageSessions id={id} />
+                        <ActivityPerformance id={id} />
                     </div>
                 </section>
                 <UserData keyData={user?.keyData} />

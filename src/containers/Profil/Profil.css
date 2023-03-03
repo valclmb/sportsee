@@ -17,3 +17,6 @@
 .profil__stats section {
     width: 80%;
 }
+.profil__stats section>div {
+    display: flex;
+}
