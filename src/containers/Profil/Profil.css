@@ -11,7 +11,7 @@
     color: var(--color-second);
 }
 .profil>p {
-    margin-bottom: 30px;
+    margin-bottom: 70px;
 }
 .profil__stats {
     display: grid;
@@ -29,4 +29,11 @@
 }
 .profil__stats section>div {
     display: flex;
+}
+
+@media (max-width: 1048px) or (max-height: 900px){
+    .profil__stats {
+    grid-template-rows: 220px 150px; 
+    }
+
 }

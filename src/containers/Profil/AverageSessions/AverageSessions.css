@@ -26,3 +26,11 @@
     height: 20px;
     background-color: white;
 }
+
+@media (max-width: 1048px) or (max-height: 900px){
+    .average-sessions h3{
+      padding: 0;
+       
+     }
+
+}

@@ -47,3 +47,16 @@ p.user-data__card__label {
     font-size: 14px;
     margin-top : 5px;
 } 
+
+@media (max-width: 1048px) or (max-height: 900px) {
+    
+    .user-data__card__icon {
+        margin-right: 10px;
+    }
+    .user-data__card__value {
+        font-size: 15px;
+    }
+    .user-data__card {
+        padding: 15px;
+    }
+}

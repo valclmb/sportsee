@@ -10,6 +10,7 @@
 }
 .activity-chart .custom-tooltip li {
         font-size: 12px;
+        padding: 5px;
 }
 /* custom legend */
 .activity-chart .custom-legend {
