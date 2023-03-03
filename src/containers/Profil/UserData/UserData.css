@@ -1,8 +1,8 @@
 .user-data {
-    width: 20%;
+    grid-area: userdata;
     display: flex;
     flex-direction: column;
-    gap:30px;
+    justify-content: space-between;
 }
 .user-data__card {
     background-color: var(--color-third);

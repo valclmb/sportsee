@@ -11,8 +11,15 @@
     color: var(--color-second);
 }
 .profil__stats {
-    display: flex;
-    gap:30px;
+    display: grid;
+    grid-template-columns: repeat(4,23%); 
+    grid-template-rows: repeat(2,50%) ; 
+    grid-template-areas: 
+    "activity activity activity userdata"
+    "avgsessions performance objectif userdata";
+    column-gap:2%;
+    row-gap: 5%;
+    
 }
 .profil__stats section {
     width: 80%;

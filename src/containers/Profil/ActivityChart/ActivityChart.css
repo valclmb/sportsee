@@ -1,4 +1,5 @@
 .activity-chart {
+    grid-area: activity;
     background-color: var(--color-third);
     border-radius: 5px;
 }

@@ -1,4 +1,5 @@
 .activity-score {
+    grid-area: objectif;
     position: relative;
     background-color: var(--color-third);
     border-radius: 5px;

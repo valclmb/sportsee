@@ -1,3 +1,4 @@
+import "./ActivityPerformance.css";
 import { useEffect, useState } from "react";
 import {
     PolarAngleAxis,
@@ -21,6 +22,7 @@ export const ActivityPerformance = ({ id }) => {
             width={250}
             outerRadius="80%"
             data={data?.data}
+            className="activity-performance"
         >
             <PolarGrid />
             <PolarAngleAxis

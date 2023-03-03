@@ -54,11 +54,14 @@ export const ActivityChart = ({ id }) => {
     );
 
     return (
-        <ResponsiveContainer width="100%" height={320}>
+        <ResponsiveContainer
+            width="100%"
+            height={320}
+            className="activity-chart"
+        >
             <BarChart
                 data={activity}
                 barGap={8}
-                className="activity-chart"
                 margin={{ left: 32, right: 32, bottom: 32 }}
             >
                 <CartesianGrid

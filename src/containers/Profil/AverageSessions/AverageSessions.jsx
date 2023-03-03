@@ -1,3 +1,4 @@
+import "./AverageSessions.css";
 import { useEffect, useState } from "react";
 import { Legend, Line, LineChart, Tooltip, XAxis, YAxis } from "recharts";
 import { getOne } from "../../../http-services";
@@ -22,7 +23,12 @@ export const AverageSessions = ({ id }) => {
     };
 
     return (
-        <LineChart width={250} height={250} data={data}>
+        <LineChart
+            width={250}
+            height={250}
+            data={data}
+            className="average-sessions"
+        >
             <Line type="monotone" dataKey="sessionLength" />
             <XAxis
                 tickFormatter={(option) => days[option]}

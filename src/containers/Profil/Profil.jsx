@@ -24,20 +24,16 @@ export const Profil = () => {
                 Bonjour <span>{user?.userInfos.firstName}</span>
             </h2>
             <div className="profil__stats">
-                <section>
-                    <ActivityChart id={id} />
-                    <div>
-                        <AverageSessions id={id} />
-                        <ActivityPerformance id={id} />
-                        <ActivityScore
-                            score={[
-                                { score: user?.todayScore },
-                                { score: 1 - user?.todayScore },
-                            ]}
-                        />
-                    </div>
-                </section>
+                <ActivityChart id={id} />
                 <UserData keyData={user?.keyData} />
+                <ActivityPerformance id={id} />
+                <AverageSessions id={id} />
+                <ActivityScore
+                    score={[
+                        { score: user?.todayScore },
+                        { score: 1 - user?.todayScore },
+                    ]}
+                />
             </div>
         </div>
     );
