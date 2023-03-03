@@ -67,9 +67,10 @@ export const ActivityDaily = ({ id }) => {
                 />
                 <YAxis
                     orientation="right"
-                    interval={2}
+                    interval={1}
                     axisLine={false}
                     tickLine={false}
+                    scale="linear"
                     padding={{ top: 20 }}
                     tickMargin={25}
                 />

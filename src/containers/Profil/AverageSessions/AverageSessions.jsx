@@ -4,6 +4,7 @@ import {
     Legend,
     Line,
     LineChart,
+    Rectangle,
     ReferenceArea,
     ResponsiveContainer,
     Tooltip,
@@ -15,11 +16,15 @@ import { getOne } from "../../../http-services";
 export const AverageSessions = ({ id }) => {
     const [data, setData] = useState();
 
-    const days = ["L", "M", "M", "J", "V", "S", "D"];
+    const days = ["", "L", "M", "M", "J", "V", "S", "D", ""];
     // Get average-sessions
     useEffect(() => {
         getOne(id, "average-sessions").then((res) =>
-            setData(res.data.sessions)
+            setData([
+                { day: 0, sessionLength: 0 },
+                ...res.data.sessions,
+                { day: 0, sessionLength: 60 },
+            ])
         );
     }, []);
 
@@ -41,6 +46,21 @@ export const AverageSessions = ({ id }) => {
             <circle cx={cx} cy={cy} r={4} fill="white" className="custom-dot">
                 test
             </circle>
+        );
+    };
+
+    const CustomCursor = (props) => {
+        console.log(props.points);
+        return (
+            <Rectangle
+                fill="black"
+                stroke="black"
+                x={props.points[0].x}
+                y={0}
+                width={props.width}
+                height={500}
+                opacity={0.1}
+            />
         );
     };
 
@@ -66,11 +86,11 @@ export const AverageSessions = ({ id }) => {
                     axisLine={false}
                     tickLine={false}
                     tick={{ fill: "rgba(255 255 255 / .5" }}
-                    padding={{ left: 10, right: 10 }}
+                    padding={{ left: -20, right: -20 }}
                 />
                 <YAxis hide={true} padding={{ bottom: 20 }} />
                 <Legend verticalAlign="top" content={customLegend} />
-                <Tooltip content={customTooltip} />
+                <Tooltip content={customTooltip} cursor={<CustomCursor />} />
             </LineChart>
         </ResponsiveContainer>
     );

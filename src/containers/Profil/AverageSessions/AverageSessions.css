@@ -6,7 +6,7 @@
 .average-sessions h3{
    font-size: 15px;
    color: rgba(255, 255, 255, 0.7);
-   padding: 20px;
+   padding: 20px 30px;
     padding-right:50px;
 }
 
@@ -30,7 +30,6 @@
 @media (max-width: 1048px) or (max-height: 900px){
     .average-sessions h3{
       padding: 0;
-       
      }
 
 }
