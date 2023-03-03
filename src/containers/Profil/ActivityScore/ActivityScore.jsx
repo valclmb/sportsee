@@ -13,34 +13,8 @@ export const ActivityScore = ({ score }) => {
             fill="white"
         />
     );
-    const activeShape = ({
-        cx,
-        cy,
-        startAngle,
-        endAngle,
-        outerRadius,
-        payload,
-    }) => (
+    const activeShape = ({ cx, cy, startAngle, endAngle, outerRadius }) => (
         <g>
-            {/* <text
-                className="active-shape__value"
-                x={cx}
-                y={cy}
-                textAnchor="middle"
-                fill="black"
-            >
-                {payload.score * 100}%
-            </text>
-            <text
-                className="active-shape__descr"
-                x={cx}
-                y={cy}
-                dy={25}
-                textAnchor="middle"
-                fill="#74798C"
-            >
-                de votre objectif
-            </text> */}
             <Sector
                 cx={cx}
                 cy={cy}
@@ -64,8 +38,9 @@ export const ActivityScore = ({ score }) => {
     );
     return (
         <div className="activity-score">
-            <ResponsiveContainer height={250} width={250}>
-                <PieChart>
+            <h3>Score</h3>
+            <ResponsiveContainer height="100%" width="100%">
+                <PieChart margin={{ top: 15, left: 15, right: 15, bottom: 15 }}>
                     <Pie
                         activeIndex={0}
                         data={score}

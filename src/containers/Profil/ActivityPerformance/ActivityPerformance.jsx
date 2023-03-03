@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import {
     PolarAngleAxis,
     PolarGrid,
-    PolarRadiusAxis,
     Radar,
     RadarChart,
+    ResponsiveContainer,
 } from "recharts";
 import { getOne } from "../../../http-services";
 
@@ -16,20 +16,25 @@ export const ActivityPerformance = ({ id }) => {
         getOne(id, "performance").then((res) => setData(res.data));
     }, []);
 
+    const category = {
+        1: "Cardio",
+        2: "Energie",
+        3: "Endurance",
+        4: "Force",
+        5: "Vitesse",
+        6: "Intensité",
+    };
     return (
-        <RadarChart
-            height={250}
-            width={250}
-            outerRadius="80%"
-            data={data?.data}
-            className="activity-performance"
-        >
-            <PolarGrid />
-            <PolarAngleAxis
-                dataKey="kind"
-                tickFormatter={(option) => data.kind[option]}
-            />
-            <Radar dataKey="value" fill="#FF0101" fillOpacity={0.5} />
-        </RadarChart>
+        <ResponsiveContainer className="activity-performance">
+            <RadarChart outerRadius="58%" data={data?.data}>
+                <PolarGrid gridType="polygon" radialLines={false} />
+                <PolarAngleAxis
+                    dataKey="kind"
+                    tickFormatter={(option) => category[option]}
+                    tick={{ fill: "white", fontSize: 12 }}
+                />
+                <Radar dataKey="value" fill="#FF0101" fillOpacity={0.7} />
+            </RadarChart>
+        </ResponsiveContainer>
     );
 };

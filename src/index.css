@@ -5,8 +5,8 @@
 }
 body{
     margin: 0;
-    /* min-width: 1024px;
-    min-height: 780px; */
+    min-width: 1024px;
+    min-height: 780px;
 }
 *{
     font-family: "Roboto", sans-serif;
@@ -17,4 +17,8 @@ body{
 ul {
     list-style-type: none;
     padding: 0;
+}
+/* custom tooltip */ 
+ [role=dialog] {
+    outline: none;
 }

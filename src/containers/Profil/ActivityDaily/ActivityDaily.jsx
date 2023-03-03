@@ -10,9 +10,9 @@ import {
     YAxis,
 } from "recharts";
 import { getOne } from "../../../http-services";
-import "./ActivityChart.css";
+import "./ActivityDaily.css";
 
-export const ActivityChart = ({ id }) => {
+export const ActivityDaily = ({ id }) => {
     const [activity, setActivity] = useState();
     const barRadius = [5, 5, 0, 0];
 
@@ -54,11 +54,7 @@ export const ActivityChart = ({ id }) => {
     );
 
     return (
-        <ResponsiveContainer
-            width="100%"
-            height={320}
-            className="activity-chart"
-        >
+        <ResponsiveContainer width="100%" className="activity-chart">
             <BarChart
                 data={activity}
                 barGap={8}

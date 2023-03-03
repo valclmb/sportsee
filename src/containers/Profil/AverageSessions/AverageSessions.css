@@ -1,3 +1,28 @@
 .average-sessions {
+    background-color: var(--color-second);
+    border-radius: 5px;
     grid-area: avgsessions;
+}
+.average-sessions h3{
+   font-size: 15px;
+   color: rgba(255, 255, 255, 0.7);
+   padding: 20px;
+    padding-right:50px;
+}
+
+.average-sessions .custom-tooltip__value {
+    background-color: white;
+    font-size: 12px;
+    padding: 5px;
+}
+.average-sessions .custom-tooltip__area {
+    position: absolute;
+    padding: 50px;
+    height: 100%;
+    background-color: blue;
+}
+.average-sessions .custom-dot {
+    width: 20px;
+    height: 20px;
+    background-color: white;
 }

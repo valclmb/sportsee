@@ -10,10 +10,13 @@
 .profil h2 span {
     color: var(--color-second);
 }
+.profil>p {
+    margin-bottom: 30px;
+}
 .profil__stats {
     display: grid;
     grid-template-columns: repeat(4,23%); 
-    grid-template-rows: repeat(2,50%) ; 
+    grid-template-rows: 320px 260px; 
     grid-template-areas: 
     "activity activity activity userdata"
     "avgsessions performance objectif userdata";

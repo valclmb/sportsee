@@ -3,24 +3,19 @@
     background-color: var(--color-third);
     border-radius: 5px;
 }
-/* custom tooltip */ 
-.activity-chart [role=dialog] {
-    outline: none;
-}
 .activity-chart .custom-tooltip {
     color: white;
     background-color: var(--color-second);
 
 }
 .activity-chart .custom-tooltip li {
-        padding: 8px;
         font-size: 12px;
 }
 /* custom legend */
 .activity-chart .custom-legend {
    display: flex;
    justify-content: space-between;
-   padding: 20px 0;
+   padding: 5px 0;
 }
 .activity-chart .custom-legend h3 {
     font-size: 15px;

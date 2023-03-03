@@ -4,6 +4,12 @@
     background-color: var(--color-third);
     border-radius: 5px;
 }
+.activity-score h3 {
+    font-size: 15px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
 .activity-score__descr {
     position: absolute;
     top: 50%;
