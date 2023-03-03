@@ -1,0 +1,22 @@
+.activity-score {
+    position: relative;
+    background-color: var(--color-third);
+    border-radius: 5px;
+}
+.activity-score__descr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+.activity-score__descr>div {
+    font-size: 16px;
+    color: #74798C;
+    width: 110px;
+    font-weight: 500;
+    line-height: 25px;
+    margin-top: 5px;
+}
