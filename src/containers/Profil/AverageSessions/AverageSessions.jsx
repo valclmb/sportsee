@@ -13,7 +13,9 @@ import {
 import { getOne } from "../../../http-services";
 import PropTypes from "prop-types";
 
-/** Average sessions Line chart */
+/** Average sessions Line chart
+ * @param {number} id - id of the user
+ */
 export const AverageSessions = ({ id }) => {
     const [data, setData] = useState();
 

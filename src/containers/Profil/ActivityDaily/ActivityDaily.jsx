@@ -13,7 +13,9 @@ import { getOne } from "../../../http-services";
 import "./ActivityDaily.css";
 import PropTypes from "prop-types";
 
-/** ActivityDaily,bar of the user activities */
+/** ActivityDaily,bar of the user activities
+ * @param {number} id - id of the user
+ */
 export const ActivityDaily = ({ id }) => {
     const [activity, setActivity] = useState();
     const barRadius = [5, 5, 0, 0];

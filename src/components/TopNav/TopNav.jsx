@@ -1,6 +1,7 @@
 import "./TopNav.css";
 import logo from "./../../assets/logo.png";
 
+/** Top nav of the website */
 export const TopNav = () => {
     const navItems = ["Accueil", "Profil", "Réglages", "Communauté"];
     return (

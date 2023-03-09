@@ -10,7 +10,9 @@ import {
 import { getOne } from "../../../http-services";
 import PropTypes from "prop-types";
 
-/** ActivityPerformance, radar chart of the user data */
+/** ActivityPerformance, radar chart of the user data
+ * @param {number} id - id of the user
+ */
 export const ActivityPerformance = ({ id }) => {
     const [data, setData] = useState();
 

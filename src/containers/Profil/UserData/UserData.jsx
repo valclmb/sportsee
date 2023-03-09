@@ -1,10 +1,15 @@
 import "./UserData.css";
 import PropTypes from "prop-types";
 
-/** Display user data with cards */
+/** Display user data with cards
+ * @param {object} keyData - user key infos
+ */
 export const UserData = ({ keyData }) => {
-    /** Get the icon image url */
+    /** Get the icon image url
+     *  @param {string} icon - name of the icon fot find it in assets
+     */
     const iconLink = (icon) => `/src/assets/KeyData/${icon}.png`;
+
     const items = [
         {
             param: "calories",

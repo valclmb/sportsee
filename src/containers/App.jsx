@@ -3,7 +3,7 @@ import { TopNav } from "../components/TopNav/TopNav";
 import "./App.css";
 import { Profil } from "./Profil/Profil";
 
-/** App: contain the sidenav & profil components */
+/** App: contain the navs and the profil components */
 function App() {
     return (
         <div className="App">

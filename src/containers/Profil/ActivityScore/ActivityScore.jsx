@@ -2,9 +2,17 @@ import "./ActivityScore.css";
 import { Pie, PieChart, ResponsiveContainer, Sector } from "recharts";
 import PropTypes from "prop-types";
 
-/** ActivityScore, pie chart of the daily score completion of user objectif */
+/** ActivityScore, pie chart of the daily score completion of user objectif *
+ *  @param {array} score - score of the user
+ */
 export const ActivityScore = ({ score }) => {
-    /** Display of the inactive shape of the pie*/
+    /** Display of the inactive shape of the pie
+     * @param {number} cx - coordinate x of the pie
+     * @param {number} cy - coordinate y of the pie
+     * @param {number} startAngle - start angle of the pie
+     * @param {number} enAngle - end angle of the pie
+     * @param {number} outerRadius - outer radius of the pie
+     */
     const inactiveShape = ({ cx, cy, startAngle, endAngle, outerRadius }) => (
         <Sector
             cx={cx}
@@ -17,7 +25,13 @@ export const ActivityScore = ({ score }) => {
         />
     );
 
-    /** Display of the active shape of the pie*/
+    /** Display of the active shape of the pie
+     * @param {number} cx - coordinate x of the pie
+     * @param {number} cy - coordinate y of the pie
+     * @param {number} startAngle - start angle of the pie
+     * @param {number} enAngle - end angle of the pie
+     * @param {number} outerRadius - outer radius of the pie
+     */
     const activeShape = ({ cx, cy, startAngle, endAngle, outerRadius }) => (
         <g>
             <Sector
@@ -41,6 +55,7 @@ export const ActivityScore = ({ score }) => {
             />
         </g>
     );
+
     return (
         <div className="activity-score">
             <h3>Score</h3>
