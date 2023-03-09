@@ -13,13 +13,16 @@ import {
 import { getOne } from "../../../http-services";
 import PropTypes from "prop-types";
 
+/** Average sessions Line chart */
 export const AverageSessions = ({ id }) => {
     const [data, setData] = useState();
 
     const days = ["", "L", "M", "M", "J", "V", "S", "D", ""];
-    // Get average-sessions
+
+    /** On component mount : fetch api for get average sessions data */
     useEffect(() => {
         getOne(id, "average-sessions").then((res) =>
+            // Add generic data before and after the real data for borderless display
             setData([
                 { day: 0, sessionLength: 0 },
                 ...res.data.sessions,
@@ -28,9 +31,14 @@ export const AverageSessions = ({ id }) => {
         );
     }, []);
 
+    /** Custom legend for the line chart */
     const customLegend = () => <h3>Durée moyenne des sessions</h3>;
 
-    const customTooltip = ({ active, payload, coordinate: { x, y } }) => {
+    /** Custom tooltip for the line chart
+     * @param {boolean} active - True when the user pass through the line chart
+     * @param {array} payload - Data to display in the tooltip
+     */
+    const customTooltip = ({ active, payload }) => {
         if (active && payload && payload.length) {
             return (
                 <div className="custom-tooltip__value">
@@ -40,8 +48,11 @@ export const AverageSessions = ({ id }) => {
         }
     };
 
-    const customDot = (props) => {
-        const { cx, cy } = props;
+    /** Custom dot for the line chart
+     * @param {number} cx - x coordinate infos
+     * @param {number} cy - y coordinate infos
+     */
+    const customDot = ({ cx, cy }) => {
         return (
             <circle cx={cx} cy={cy} r={4} fill="white" className="custom-dot">
                 test
@@ -49,15 +60,18 @@ export const AverageSessions = ({ id }) => {
         );
     };
 
-    const CustomCursor = (props) => {
-        console.log(props.points);
+    /** Custom cursor for the line chart
+     * @param {array} points - coordinate of the line chart edge component
+     * @param {number} width - the width of the line chart component
+     */
+    const CustomCursor = ({ points, width }) => {
         return (
             <Rectangle
                 fill="black"
                 stroke="black"
-                x={props.points[0].x}
+                x={points[0].x}
                 y={0}
-                width={props.width}
+                width={width}
                 height={500}
                 opacity={0.1}
             />

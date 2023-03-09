@@ -1,7 +1,9 @@
 import "./UserData.css";
 import PropTypes from "prop-types";
 
+/** Display user data with cards */
 export const UserData = ({ keyData }) => {
+    /** Get the icon image url */
     const iconLink = (icon) => `/src/assets/KeyData/${icon}.png`;
     const items = [
         {

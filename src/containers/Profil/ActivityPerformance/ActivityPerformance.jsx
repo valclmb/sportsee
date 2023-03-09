@@ -10,9 +10,11 @@ import {
 import { getOne } from "../../../http-services";
 import PropTypes from "prop-types";
 
+/** ActivityPerformance, radar chart of the user data */
 export const ActivityPerformance = ({ id }) => {
     const [data, setData] = useState();
-    // Get activity type
+
+    /** On component mount : fetch api for get user performance data */
     useEffect(() => {
         getOne(id, "performance").then((res) => setData(res.data));
     }, []);

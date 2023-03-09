@@ -7,17 +7,15 @@ import { AverageSessions } from "./AverageSessions/AverageSessions";
 import "./Profil.css";
 import { UserData } from "./UserData/UserData";
 
-// import user from "/src/assets/apiMock/user.json";
-
+/** Profil, container of all user informations */
 export const Profil = () => {
     const id = 12;
     const [user, setUser] = useState();
-    const [activityType, setActivityType] = useState();
 
     // Access to score is different according to user id
     const score = id === 12 ? user?.todayScore : user?.score;
 
-    // Get user
+    /** On mount, fetch the api, get user*/
     useEffect(() => {
         getOne(id).then((res) => setUser(res.data));
     }, []);

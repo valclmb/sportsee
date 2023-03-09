@@ -13,15 +13,20 @@ import { getOne } from "../../../http-services";
 import "./ActivityDaily.css";
 import PropTypes from "prop-types";
 
+/** ActivityDaily,bar of the user activities */
 export const ActivityDaily = ({ id }) => {
     const [activity, setActivity] = useState();
     const barRadius = [5, 5, 0, 0];
 
-    // Get activity
+    /** On component mount : fetch api for get the user activity sessions */
     useEffect(() => {
         getOne(id, "activity").then((res) => setActivity(res.data.sessions));
     }, []);
 
+    /** Custom tooltip for the line chart
+     * @param {boolean} active - True when the user pass through the line chart
+     * @param {array} payload - Data to display in the tooltip
+     */
     const customTooltip = ({ active, payload }) => {
         if (active && payload && payload.length) {
             return (
@@ -37,6 +42,9 @@ export const ActivityDaily = ({ id }) => {
         }
     };
 
+    /** Custom tooltip for the line chart
+     * @param {array} payload - Data to display in the legend
+     */
     const customLegend = ({ payload }) => (
         <div className="custom-legend">
             <h3>Activité quotidienne</h3>

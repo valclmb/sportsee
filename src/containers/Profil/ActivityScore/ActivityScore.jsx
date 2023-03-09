@@ -2,7 +2,9 @@ import "./ActivityScore.css";
 import { Pie, PieChart, ResponsiveContainer, Sector } from "recharts";
 import PropTypes from "prop-types";
 
+/** ActivityScore, pie chart of the daily score completion of user objectif */
 export const ActivityScore = ({ score }) => {
+    /** Display of the inactive shape of the pie*/
     const inactiveShape = ({ cx, cy, startAngle, endAngle, outerRadius }) => (
         <Sector
             cx={cx}
@@ -14,6 +16,8 @@ export const ActivityScore = ({ score }) => {
             fill="white"
         />
     );
+
+    /** Display of the active shape of the pie*/
     const activeShape = ({ cx, cy, startAngle, endAngle, outerRadius }) => (
         <g>
             <Sector
