@@ -11,6 +11,7 @@ import {
 } from "recharts";
 import { getOne } from "../../../http-services";
 import "./ActivityDaily.css";
+import PropTypes from "prop-types";
 
 export const ActivityDaily = ({ id }) => {
     const [activity, setActivity] = useState();
@@ -104,4 +105,8 @@ export const ActivityDaily = ({ id }) => {
             </BarChart>
         </ResponsiveContainer>
     );
+};
+
+ActivityDaily.propTypes = {
+    id: PropTypes.number,
 };

@@ -53,3 +53,7 @@ export const UserData = ({ keyData }) => {
         </div>
     );
 };
+
+ActivityScore.propTypes = {
+    keyData: PropTypes.object,
+};

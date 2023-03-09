@@ -8,6 +8,7 @@ import {
     ResponsiveContainer,
 } from "recharts";
 import { getOne } from "../../../http-services";
+import PropTypes from "prop-types";
 
 export const ActivityPerformance = ({ id }) => {
     const [data, setData] = useState();
@@ -37,4 +38,8 @@ export const ActivityPerformance = ({ id }) => {
             </RadarChart>
         </ResponsiveContainer>
     );
+};
+
+ActivityPerformance.propTypes = {
+    id: PropTypes.number,
 };

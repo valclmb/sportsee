@@ -95,3 +95,6 @@ export const AverageSessions = ({ id }) => {
         </ResponsiveContainer>
     );
 };
+ActivityScore.propTypes = {
+    id: PropTypes.number,
+};

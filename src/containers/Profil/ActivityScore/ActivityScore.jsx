@@ -1,5 +1,6 @@
 import "./ActivityScore.css";
 import { Pie, PieChart, ResponsiveContainer, Sector } from "recharts";
+import PropTypes from "prop-types";
 
 export const ActivityScore = ({ score }) => {
     const inactiveShape = ({ cx, cy, startAngle, endAngle, outerRadius }) => (
@@ -56,4 +57,8 @@ export const ActivityScore = ({ score }) => {
             </div>
         </div>
     );
+};
+
+ActivityScore.propTypes = {
+    score: PropTypes.array,
 };
