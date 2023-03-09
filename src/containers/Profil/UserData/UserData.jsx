@@ -1,4 +1,5 @@
 import "./UserData.css";
+import PropTypes from "prop-types";
 
 export const UserData = ({ keyData }) => {
     const iconLink = (icon) => `/src/assets/KeyData/${icon}.png`;
@@ -54,6 +55,6 @@ export const UserData = ({ keyData }) => {
     );
 };
 
-ActivityScore.propTypes = {
+UserData.propTypes = {
     keyData: PropTypes.object,
 };

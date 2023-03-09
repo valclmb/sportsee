@@ -5,13 +5,13 @@ import {
     Line,
     LineChart,
     Rectangle,
-    ReferenceArea,
     ResponsiveContainer,
     Tooltip,
     XAxis,
     YAxis,
 } from "recharts";
 import { getOne } from "../../../http-services";
+import PropTypes from "prop-types";
 
 export const AverageSessions = ({ id }) => {
     const [data, setData] = useState();
@@ -95,6 +95,6 @@ export const AverageSessions = ({ id }) => {
         </ResponsiveContainer>
     );
 };
-ActivityScore.propTypes = {
+AverageSessions.propTypes = {
     id: PropTypes.number,
 };
