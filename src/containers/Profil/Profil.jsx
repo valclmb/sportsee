@@ -11,7 +11,7 @@ import { UserData } from "./UserData/UserData";
 export const Profil = () => {
     const id = 12;
     const [user, setUser] = useState();
-    const [error, setError] = useState();
+    const [error, setError] = useState(false);
 
     // Access to score is different according to user id
     const score = id === 12 ? user?.todayScore : user?.score;
@@ -19,19 +19,14 @@ export const Profil = () => {
     /** On mount, fetch the api, get user*/
     useEffect(() => {
         getOne(id).then((res) => {
-            if (res.error) setError(true);
+            if (res === "can not get user") setError(true);
             else {
-                setError(false);
-                setUser(res.data);
+                setUser(res?.data);
             }
         });
     }, []);
 
-    if (error === undefined) {
-        return <h2>Loading...</h2>;
-    }
-
-    if (error === true) {
+    if (error) {
         return <h2>404 not found</h2>;
     }
 

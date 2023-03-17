@@ -7,11 +7,9 @@ const baseUrl = import.meta.env.VITE_API_URL;
 export const getOne = (id, param) => {
     return fetch(`${baseUrl}${id}${param ? "/" + param : ""}`)
         .then((res) => res.json())
-        .catch(() =>
-            fetch(`/apiMock/user${param ? "." + param : "." + id}.json`)
-                .then((res) => res.json())
-                .catch((res) => {
-                    return { error: true };
-                })
-        );
+        .catch(() => {
+            return fetch(`/apiMock/user${param ? "." + param : ""}.json`).then(
+                (res) => res.json()
+            );
+        });
 };
