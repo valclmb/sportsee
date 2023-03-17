@@ -1,5 +1,5 @@
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-!
+
 
 # SportSee (P12 : Développez un tableau de bord d'analytics avec React)
 
@@ -32,7 +32,7 @@ Here is a new version of the dashboard page. This brand new page will allow the 
 
 -   Run the app
 
-    ` yarn start / npm start`
+    `npm run dev`
 
 ## Api for the project
 
