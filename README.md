@@ -32,7 +32,7 @@ Here is a new version of the dashboard page. This brand new page will allow the 
 
 -   Run the app
 
-    ` npm run dev`
+    `npm run dev`
 
 ## Api for the project
 
