@@ -14,7 +14,7 @@ export const Profil = () => {
     const [error, setError] = useState(false);
 
     // Access to score is different according to user id
-    const score = id === 12 ? user?.todayScore : user?.score;
+    const score = user?.id === 12 ? user?.todayScore : user?.score;
 
     /** On mount, fetch the api, get user*/
     useEffect(() => {
