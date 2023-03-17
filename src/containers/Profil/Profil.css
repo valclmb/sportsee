@@ -10,30 +10,28 @@
 .profil h2 span {
     color: var(--color-second);
 }
-.profil>p {
-    margin-bottom: 70px;
+.profil > p {
+    margin-bottom: 55px;
 }
 .profil__stats {
     display: grid;
-    grid-template-columns: repeat(4,23%); 
-    grid-template-rows: 320px 260px; 
-    grid-template-areas: 
-    "activity activity activity userdata"
-    "avgsessions performance objectif userdata";
-    column-gap:2%;
+    grid-template-columns: repeat(4, 23%);
+    grid-template-rows: 320px 260px;
+    grid-template-areas:
+        "activity activity activity userdata"
+        "avgsessions performance objectif userdata";
+    column-gap: 2%;
     row-gap: 5%;
-    
 }
 .profil__stats section {
     width: 80%;
 }
-.profil__stats section>div {
+.profil__stats section > div {
     display: flex;
 }
 
-@media (max-width: 1048px) or (max-height: 900px){
+@media (max-width: 1048px) or (max-height: 900px) {
     .profil__stats {
-    grid-template-rows: 220px 150px; 
+        grid-template-rows: 220px 150px;
     }
-
 }

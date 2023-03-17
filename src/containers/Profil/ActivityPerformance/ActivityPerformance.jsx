@@ -29,6 +29,7 @@ export const ActivityPerformance = ({ id }) => {
         5: "Vitesse",
         6: "Intensité",
     };
+
     return (
         <ResponsiveContainer className="activity-performance">
             <RadarChart outerRadius="58%" data={data?.data}>

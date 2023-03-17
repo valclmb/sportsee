@@ -31,7 +31,7 @@
     background-color: rgba(249, 206, 35, 0.1);
 }
 .user-data__card__icon.lipid {
-    background-color:rgba(253, 81, 129, 0.1);
+    background-color: rgba(253, 81, 129, 0.1);
 }
 
 .user-data__card p {
@@ -43,13 +43,12 @@
     font-size: 20px;
 }
 p.user-data__card__label {
-    color: #74798C;
+    color: #74798c;
     font-size: 14px;
-    margin-top : 5px;
-} 
+    margin-top: 5px;
+}
 
 @media (max-width: 1048px) or (max-height: 900px) {
-    
     .user-data__card__icon {
         margin-right: 10px;
     }

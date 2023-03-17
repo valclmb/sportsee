@@ -15,7 +15,6 @@ export const UserData = ({ keyData }) => {
             param: "calories",
             label: "Calories",
             icon: iconLink("Calories"),
-
             value: keyData?.calorieCount,
             unity: "kCal",
         },
@@ -23,7 +22,6 @@ export const UserData = ({ keyData }) => {
             param: "protein",
             label: "Protéines",
             icon: iconLink("Protein"),
-
             value: keyData?.proteinCount,
             unity: "g",
         },
