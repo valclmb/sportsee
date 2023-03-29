@@ -1,5 +1,5 @@
 import "./TopNav.css";
-import logo from "./../../assets/logo.png";
+import logo from "/logo.png";
 
 /** Top nav of the website */
 export const TopNav = () => {

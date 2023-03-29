@@ -3,7 +3,7 @@ import "./SideNav.css";
 /** Side nav of the website*/
 export const Sidenav = () => {
     const navItems = ["Bike", "Yoga", "Swim", "Dumbell"];
-    const iconSrc = (icon) => `/src/assets/SideNav/${icon}.png`;
+    const iconSrc = (icon) => `/SideNav/${icon}.png`;
     return (
         <div className="side-nav">
             <nav>

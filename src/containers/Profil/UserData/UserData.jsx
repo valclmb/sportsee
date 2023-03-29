@@ -8,7 +8,7 @@ export const UserData = ({ keyData }) => {
     /** Get the icon image url
      *  @param {string} icon - name of the icon fot find it in assets
      */
-    const iconLink = (icon) => `/src/assets/KeyData/${icon}.png`;
+    const iconLink = (icon) => `/KeyData/${icon}.png`;
 
     const items = [
         {
