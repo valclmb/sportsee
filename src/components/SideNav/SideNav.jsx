@@ -1,16 +1,16 @@
+import { Bike, Dumbbell, LineChart, Medal } from "lucide-react";
 import "./SideNav.css";
 
 /** Side nav of the website*/
 export const Sidenav = () => {
-  const navItems = ["Bike", "Yoga", "Swim", "Dumbell"];
-  const iconSrc = (icon) => `/public/SideNav/${icon}.png`;
+  const navItems = [Bike, Dumbbell, Medal, LineChart];
   return (
     <div className="side-nav">
       <nav>
         <ul>
-          {navItems.map((item, key) => (
+          {navItems.map((Icon, key) => (
             <li key={key}>
-              <img src={iconSrc(item)} alt={item} />
+              <Icon color="#EA3324" />
             </li>
           ))}
         </ul>

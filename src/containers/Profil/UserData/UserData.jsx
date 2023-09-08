@@ -1,3 +1,4 @@
+import { Apple, Drumstick, Flame, Pizza } from "lucide-react";
 import "./UserData.css";
 import PropTypes from "prop-types";
 
@@ -14,28 +15,35 @@ export const UserData = ({ keyData }) => {
     {
       param: "calories",
       label: "Calories",
-      icon: iconLink("Calories"),
+      icon: Flame,
+      color: "red",
       value: keyData?.calorieCount,
       unity: "kCal",
     },
     {
       param: "protein",
       label: "Protéines",
-      icon: iconLink("Protein"),
+      icon: Drumstick,
+      color: "blue",
+
       value: keyData?.proteinCount,
       unity: "g",
     },
     {
       param: "glucid",
       label: "Glucide",
-      icon: iconLink("Glucid"),
+      icon: Apple,
+      color: "orange",
+
       value: keyData?.carbohydrateCount,
       unity: "g",
     },
     {
       param: "lipid",
       label: "Lipides",
-      icon: iconLink("Lipid"),
+      icon: Pizza,
+      color: "purple",
+
       value: keyData?.lipidCount,
       unity: "g",
     },
@@ -45,7 +53,7 @@ export const UserData = ({ keyData }) => {
       {items.map((item) => (
         <div key={item.param} className="user-data__card">
           <div className={`user-data__card__icon ${item.param}`}>
-            <img src={item.icon} alt={item.label} />
+            <item.icon color={item.color} />
           </div>
           <div>
             <p className="user-data__card__value">
